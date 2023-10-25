@@ -6,6 +6,6 @@
 -- }, ",")
 
 -- Cursor Color "
-vim.api.nvim_set_hl(0, 'Cursor', {bg='#C75C6A'})
+vim.api.nvim_set_hl(0, 'Cursor', {bg='#B4009E'})
 
 
