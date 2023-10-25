@@ -74,7 +74,8 @@ nnoremap <C-M-E> :bufdo q<CR>
 " Save all buffers"
 nnoremap <C-W> :bufdo w<CR>
 
-" Enable Cursor Blink
+" Disable mode of the bottom
+set noshowmode 
 
 " vim plug section
 call plug#begin()

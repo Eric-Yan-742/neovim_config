@@ -5,7 +5,5 @@
 --   "r:hor50-Cursor/lCursor-blinkwait100-blinkon100-blinkoff100"
 -- }, ",")
 
--- Cursor Color "
-vim.api.nvim_set_hl(0, 'Cursor', {bg='#B4009E'})
 
 
