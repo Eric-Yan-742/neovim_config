@@ -1,0 +1,3 @@
+
+-- Flash
+require("flash").setup{}
