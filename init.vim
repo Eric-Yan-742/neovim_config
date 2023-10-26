@@ -28,8 +28,8 @@ vnoremap > >gv
 nnoremap <Leader>n :noh<cr>
 
 " Switch between buffers
-map <S-L> :bnext<cr>
-map <S-H> :bprevious<cr>
+map <Leader>l :bnext<cr>
+map <Leader>h :bprevious<cr>
 map <leader>d :bdelete<cr>
 
 " Telescope
@@ -55,15 +55,11 @@ nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
 
 "split window
-nnoremap <leader>l :vsplit<CR>
-nnoremap <leader>h :split<CR>
+nnoremap <leader>vl :vsplit<CR>
 nnoremap <leader>q :q<CR>
 
 " exit terminal mode
 tnoremap <Esc> <C-\><C-n>
-
-" Search through all lines in a buffer
-nnoremap <C-F> :BLines<CR>
 
 " Open terminal
 nnoremap <Leader>t :term<CR>
@@ -78,8 +74,10 @@ nnoremap <C-W> :bufdo w<CR>
 set noshowmode 
 
 " Scrolling
-nnoremap <C-U> 5k
-nnoremap <C-D> 5j
+nnoremap K 5k
+nnoremap J 5j
+nnoremap H L
+nnoremap L H
 
 " vim plug section
 call plug#begin()
