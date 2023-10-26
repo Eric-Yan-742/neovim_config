@@ -77,6 +77,10 @@ nnoremap <C-W> :bufdo w<CR>
 " Disable mode of the bottom
 set noshowmode 
 
+" Scrolling
+nnoremap <C-U> 5k
+nnoremap <C-D> 5j
+
 " vim plug section
 call plug#begin()
 Plug 'nvim-lualine/lualine.nvim'

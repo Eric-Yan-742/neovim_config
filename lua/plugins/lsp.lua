@@ -19,3 +19,5 @@ local lspconfig = require('lspconfig')
 vim.diagnostic.config({
   virtual_text = false,
 })
+
+
