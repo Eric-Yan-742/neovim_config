@@ -13,15 +13,32 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {'clangd'},
+  ensure_installed = {},
   handlers = {
     lsp_zero.default_setup,
   },
 })
-local lspconfig = require('lspconfig')
+require'lspconfig'.ccls.setup{}
 -- turn off virtual text
 vim.diagnostic.config({
   virtual_text = false,
 })
+
+-- Use tab to select the first item in the menu
+local cmp = require'cmp'
+cmp.setup {
+  mapping = {
+    ['<Tab>'] = cmp.mapping.confirm({
+      behavior = cmp.ConfirmBehavior.Replace,
+      select = true,
+    }),
+    ['<C-n>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
+    ['<C-p>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
+    ['<CR>'] = cmp.mapping.confirm({
+      behavior = cmp.ConfirmBehavior.Replace,
+      select = true,
+    }),
+  },
+}
 
 

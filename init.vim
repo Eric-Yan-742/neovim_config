@@ -79,6 +79,7 @@ nnoremap J 5j
 nnoremap H L
 nnoremap L H
 
+
 " vim plug section
 call plug#begin()
 Plug 'nvim-lualine/lualine.nvim'
