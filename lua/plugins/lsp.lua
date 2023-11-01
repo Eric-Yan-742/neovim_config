@@ -28,16 +28,17 @@ vim.diagnostic.config({
 local cmp = require'cmp'
 cmp.setup {
   mapping = {
-    ['<Tab>'] = cmp.mapping.confirm({
-      behavior = cmp.ConfirmBehavior.Replace,
-      select = true,
-    }),
+    ['<Tab>'] = cmp.mapping.select_next_item({behavior = cmp.SelectBehavior.Select }),
+    ['<S-Tab>'] = cmp.mapping.select_prev_item({behavior = cmp.SelectBehavior.Select} ),
     ['<C-n>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
     ['<C-p>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
     ['<CR>'] = cmp.mapping.confirm({
       behavior = cmp.ConfirmBehavior.Replace,
       select = true,
     }),
+  },
+  confirmation = {
+      default_behavior = cmp.ConfirmBehavior.Replace,
   },
 }
 
