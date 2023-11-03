@@ -34,8 +34,9 @@ map <leader>d :bdelete<cr>
 
 " Telescope
 nnoremap <C-P> <cmd>Telescope find_files<cr>
+nnoremap <leader>ff <cmd>Telescope find_files no_ignore=true<cr>
 nnoremap <leader>r <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>b <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " Neotree
