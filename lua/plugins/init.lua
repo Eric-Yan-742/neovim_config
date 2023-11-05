@@ -1,7 +1,7 @@
 require('plugins.bufferline')
 require('plugins.flash')
 require('plugins.lsp')
-require('plugins.neotree')
+require('plugins.nvimtree')
 require('plugins.treesitter')
 require('plugins.colorscheme')
 require('plugins.lualine')

@@ -28,9 +28,12 @@ vnoremap > >gv
 nnoremap <Leader>n :noh<cr>
 
 " Switch between buffers
-map <Leader>l :bnext<cr>
-map <Leader>h :bprevious<cr>
-map <leader>d :bdelete<cr>
+nnoremap <Leader>l :bnext<cr>
+nnoremap <Leader>h :bprevious<cr>
+nnoremap <leader>d :bdelete<cr>
+
+" BufferLine
+nnoremap <leader>j :BufferLinePick<cr>
 
 " Telescope
 nnoremap <C-P> <cmd>Telescope find_files<cr>
