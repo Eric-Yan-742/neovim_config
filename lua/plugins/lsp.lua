@@ -13,12 +13,11 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {},
+  ensure_installed = {clangd},
   handlers = {
     lsp_zero.default_setup,
   },
 })
-require'lspconfig'.ccls.setup{}
 -- turn off virtual text
 vim.diagnostic.config({
   virtual_text = false,

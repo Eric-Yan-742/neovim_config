@@ -30,13 +30,13 @@ nnoremap <Leader>n :noh<cr>
 " Switch between buffers
 nnoremap <Leader>l :bnext<cr>
 nnoremap <Leader>h :bprevious<cr>
-nnoremap <leader>d :bdelete<cr>
+nnoremap <C-Q>     :bdelete<cr>
 
 " BufferLine
 nnoremap <leader>j :BufferLinePick<cr>
 
 " Telescope
-nnoremap <C-P> <cmd>Telescope find_files<cr>
+nnoremap <leader>k <cmd>Telescope find_files<cr>
 nnoremap <leader>ff <cmd>Telescope find_files no_ignore=true<cr>
 nnoremap <leader>r <cmd>Telescope live_grep<cr>
 nnoremap <leader>b <cmd>Telescope buffers<cr>
@@ -83,6 +83,14 @@ nnoremap J 5j
 nnoremap H L
 nnoremap L H
 
+" DAP
+nnoremap <leader>db :lua require'dap'.toggle_breakpoint()<CR>
+nnoremap <leader>dc :lua require'dap'.continue()<CR>
+nnoremap <leader>ds :lua require'dap'.step_over()<CR>
+nnoremap <leader>di :lua require'dap'.step_into()<CR>
+nnoremap <leader>dt :lua require'dap'.terminate()<CR>
+nnoremap <leader>do :lua require("dapui").toggle()<CR>
+
 " vim plug section
 call plug#begin()
 Plug 'nvim-lualine/lualine.nvim'
@@ -112,6 +120,14 @@ Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v3.x'}
 
 " flash for jumping
 Plug 'folke/flash.nvim'
+
+" DAP
+Plug 'mfussenegger/nvim-dap'
+Plug 'rcarriga/nvim-dap-ui'
+
+" Startup
+Plug 'startup-nvim/startup.nvim'
+
 call plug#end()
 
 
